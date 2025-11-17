@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
-    <%= yield %>
-  </body>
-</html>
+    <header>
+      <nav class="navbar bg-base-100 shadow-sm">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Rails Sample App</a>
+        </div>
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="#">SignIn</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+    </body>
+  </html>
