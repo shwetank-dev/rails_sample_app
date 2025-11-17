@@ -11,21 +11,10 @@
     <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
-    <header>
-      <nav class="navbar bg-base-100 shadow-sm">
-        <div class="flex-1">
-          <a class="btn btn-ghost text-xl">Rails Sample App</a>
-        </div>
-        <div class="flex-none">
-          <ul class="menu menu-horizontal px-1">
-            <li><a href="#">SignIn</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <%= yield %>
-      </main>
-    </body>
-  </html>
+    <%= render "layouts/header" %>
+    <main>
+      <%= yield %>
+    </main>
+    <%= render "layouts/footer" %>
+  </body>
+</html>
