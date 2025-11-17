@@ -168,6 +168,8 @@ GEM
     nokogiri (1.18.10)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    nokogiri (1.18.10-x86_64-darwin)
+      racc (~> 1.4)
     parallel (1.27.0)
     parser (3.3.10.0)
       ast (~> 2.4.1)
@@ -267,7 +269,7 @@ GEM
       tailwindcss-ruby (~> 4.0)
     tailwindcss-ruby (4.0.7)
     tailwindcss-ruby (4.0.7-x86_64-darwin)
-    tailwindcss-ruby (4.0.7-x86_64-linux-gnu)
+    tailwindcss-ruby (4.0.7-x86_64-linux)
     thor (1.4.0)
     timeout (0.4.4)
     tsort (0.2.0)
@@ -316,8 +318,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
-  tailwindcss-rails (~> 4.2, < 4.4)
-  tailwindcss-ruby (= 4.0.7)
+  tailwindcss-rails (~> 4.3)
   turbo-rails
   tzinfo-data
   web-console
