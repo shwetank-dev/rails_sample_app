@@ -1,0 +1,11 @@
+<% if flash.any? %>
+  <article>
+    <ul>
+      <% flash.each do |message_type, message| %>
+        <li>
+          <%= icon(message_type.to_sym) %> <%= message %>
+        </li>
+      <% end %>
+    </ul>
+  </article>
+<% end %>

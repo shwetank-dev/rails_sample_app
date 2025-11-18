@@ -69,4 +69,9 @@ test "password and password_confirmation validations" do
   @user.password = @user.password_confirmation = "foobar"
   assert @user.valid?
 end
+
+test "passwords should not be very small" do
+  @user.password = "foo"
+  assert_not @user.valid?
+end
 end

@@ -1,9 +1,18 @@
-<footer class="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
-  <nav class="grid grid-flow-col gap-4">
-    <%= link_to 'About Us', about_path, class: "link link-hover" %>
-    <%= link_to 'Contact', contact_path, class: "link link-hover" %>
+<hr />
+<footer class="text-center">
+  <nav>
+    <ul>
+      <small>
+        &copy; <%= Time.current.year %> Ruby on Rails Tutorial. All rights reserved.
+      </small>
+    </ul>
+    <ul>
+      <li>
+        <%= link_to 'About', about_path, class: "link link-hover" %>
+      </li>
+      <li>
+        <%= link_to 'Contact', contact_path, class: "link link-hover" %>
+      </li>
+    </ul>
   </nav>
-  <aside>
-    <p>Copyright &copy; <%= Time.current.year %> - All right reserved by Ruby on Rails Tutorial</p>
-  </aside>
 </footer>

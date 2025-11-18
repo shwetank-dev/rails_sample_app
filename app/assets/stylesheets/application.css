@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  height: 100vh;
+}
+
+.hero__content {
+  margin-top: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero__figure {
+  padding: 1rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+}
+
+.layout__sidebar {
+  padding: 1rem;
+  border-right: 2px solid var(--pico-muted-border-color);
+}
+
+form {
+  width: 60%;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
