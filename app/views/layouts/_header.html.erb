@@ -4,9 +4,22 @@
       <li><strong><%= link_to 'Rails Sample App', root_path %></strong></li>
     </ul>
     <ul>
-      <li><%= link_to 'About', about_path %></li>
-      <li><%= link_to 'Contact', contact_path %></li>
-      <li><%= link_to 'Signin', '#' %></li>
+      <li><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Help', help_path %></li>
+      <li>
+        <% if logged_in? %>
+          <details class="dropdown">
+            <summary>Account</summary>
+            <ul>
+              <li><%= link_to 'Profile', current_user %></li>
+              <li><%= link_to 'Settings', '#' %></li>
+              <%= link_to 'Logout', logout_path, data: { "turbo-method": :delete } %>
+            </ul>
+          </details>
+        <% else %>
+          <%= link_to 'Login', login_path %>
+        <% end %>
+      </li>
     </ul>
   </nav>
 </header>
