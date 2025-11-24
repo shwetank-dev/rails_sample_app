@@ -6,5 +6,9 @@
   <%= f.label :password %>
   <%= f.password_field :password%>
   <%= f.submit "Login" %>
+  <%= f.label :remember_me, class: "center-text" do %>
+    <%= f.check_box :remember_me %>
+    <span>Remember me</span>
+  <% end %>
 <% end %>
 <p class="text-center">New User ? <%= link_to 'Sign Up Now', signup_path %></p>
